@@ -1,133 +1,119 @@
-# GoogleCloud BigQuery
+[← Voltar ao Portfólio de Engenharia de Dados](https://github.com/joycequoos/Data_Enginer/blob/main/README.md)
 
-### Criar sua conta no google cloud gratuitamente.
-- A aula abaixo possui o passa a passo para criação da Conta
+# Google Cloud BigQuery
 
-https://www.youtube.com/watch?v=tsJrsgSIoPo
+Estudo prático sobre o BigQuery, data warehouse gerenciado da Google Cloud — desde a criação da conta até consultas SQL básicas e intermediárias.
 
-### Conhecendo a estrutura
+## Sumário
 
-- Acessando o bigquery
+- [O que é o BigQuery](#o-que-é-o-bigquery)
+- [Criando sua conta gratuita](#criando-sua-conta-gratuita)
+- [Conhecendo a estrutura](#conhecendo-a-estrutura)
+- [Criando um projeto](#criando-um-projeto)
+- [Criando dataset e tabelas](#criando-dataset-e-tabelas)
+- [Primeiras consultas SQL](#primeiras-consultas-sql)
+- [Funções de restrição (WHERE, IN, IS NULL)](#funções-de-restrição)
+- [Principais aprendizados](#principais-aprendizados)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/01_Acesso_Big_Query.jpg">
+---
 
-Todos os dados da empresa Finanças, RH, Vendas podem ser passados para o BigQuery.
+## O que é o BigQuery
 
- O BigQuery é um data warehouse totalmente gerenciado e sem servidor oferecido pela Google Cloud. Ele foi projetado para armazenar e analisar grandes volumes de dados de forma rápida e eficiente. Com o BigQuery, você pode executar consultas SQL em escala de petabytes, sem a necessidade de gerenciar infraestrutura ou otimizar desempenho manualmente.
+O BigQuery é um data warehouse totalmente gerenciado e sem servidor oferecido pela Google Cloud. Ele foi projetado para armazenar e analisar grandes volumes de dados de forma rápida e eficiente, permitindo executar consultas SQL em escala de petabytes sem gerenciar infraestrutura.
 
- ### Benefícios de usar o BigQuery
+**Principais benefícios:**
+- Simplificação da análise de dados: centraliza dados de diferentes fontes (Finanças, RH, Vendas) em um só lugar
+- Sem necessidade de gerenciamento de servidor
+- Escalável para grandes volumes de dados
 
- - Simplificação da Análise de Dados: Centraliza os dados de diferentes fontes, facilitando a análise e geração de insights.
+---
 
- Portanto, o BigQuery é uma solução poderosa e moderna de data warehouse que ajuda empresas e profissionais a armazenar, gerenciar e analisar grandes volumes de dados de maneira eficiente e escalável.
+## Criando sua conta gratuita
 
-### Criando um novo projeto
+Passo a passo em vídeo: https://www.youtube.com/watch?v=tsJrsgSIoPo
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/02_Novo_Projeto.jpg">
+---
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/Criando_Projeto.png">
+## Conhecendo a estrutura
 
-### Criando Data Set (Conjunto De Dados)
+Acessando o BigQuery pela primeira vez:
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/03_Criar_Conjunto_Dados.jpg">
+![Acesso ao BigQuery](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/01_Acesso_Big_Query.jpg)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/04_Conjunto_Dados_2.png">
+---
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/05_Vendas.png">
+## Criando um projeto
 
-- Criar Tabela com upload
+![Criar novo projeto](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/02_Novo_Projeto.jpg)
+![Projeto criado](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/Criando_Projeto.png)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/06_CriarTabela.jpg">
+---
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/07_Criacao_Tabela_Upload.jpg">
+## Criando dataset e tabelas
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/08_Selecionar_Arquivo_Criacao.jpg">
+### Criando o Data Set (conjunto de dados)
 
-- Primeira Consulta (Select *)
+![Criar conjunto de dados](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/03_Criar_Conjunto_Dados.jpg)
+![Conjunto de dados criado](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/04_Conjunto_Dados_2.png)
+![Dataset de vendas](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/05_Vendas.png)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/09_Primeiro_Select.jpg">
+### Criando tabela via upload de arquivo
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/10_Consulta.png">
+![Criar tabela](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/06_CriarTabela.jpg)
+![Upload de arquivo](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/07_Criacao_Tabela_Upload.jpg)
+![Selecionar arquivo](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/08_Selecionar_Arquivo_Criacao.jpg)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/11_Primeira_Exec_Consulta.png">
+---
 
-- Selecionar Dados Distintos (Select Distinct)
+## Primeiras consultas SQL
 
-  Quero saber em quantos estados diferentes eu tenho clientes.
+### SELECT * (primeira consulta)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/12_Select_Distinct.png">
+![Primeira consulta](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/09_Primeiro_Select.jpg)
+![Consulta executada](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/10_Consulta.png)
+![Execução da consulta](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/11_Primeira_Exec_Consulta.png)
 
-- Alterando Nomes de Colunas e Salvando como Tabela
+### SELECT DISTINCT
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/13_Alterar_Nomes_Colunas.png">
+Exemplo prático: identificar em quantos estados diferentes há clientes cadastrados.
 
-- Salvando Resultado como tabela
+![Select Distinct](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/12_Select_Distinct.png)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/14_Salvar_Como_Tabela1.png">
+### Renomeando colunas e salvando como tabela
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/15_Tabela_Big_Query.png">
+![Alterar nomes de colunas](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/13_Alterar_Nomes_Colunas.png)
+![Salvar como tabela](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/14_Salvar_Como_Tabela1.png)
+![Tabela criada](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/15_Tabela_Big_Query.png)
+![Salvando tabela](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/16_Salvando_Tabela.png)
+![Tabela salva](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/17_Tabela_Salva.jpg)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/16_Salvando_Tabela.png">
+### Salvando consultas personalizadas
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/17_Tabela_Salva.jpg">
+![Contatos de clientes](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/18_Contatos_Clientes.png)
+![Consultas salvas](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/19_Consultas_Salvas.jpg)
 
-- Salvando Consulta Personalizada
+---
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/18_Contatos_Clientes.png">
+## Funções de restrição
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/19_Consultas_Salvas.jpg">
+### WHERE, IN, NOT IN
 
-### Funções de Restrição
+![Usando WHERE](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/19_Utilizando_Where.png)
+![Usando IN](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/20_Utilizando_IN.png)
+![Usando NOT IN](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/21_Utilizando_Not_IN.png)
 
-- Funções de Restrição (Where, IN, Not IN)
+### IS NULL / IS NOT NULL
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/19_Utilizando_Where.png">
+![IS NULL](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/22_Email_IsNull.png)
+![IS NOT NULL](https://github.com/joycequoos/GoogleCloud_BigQuer/raw/main/img/23_Email_IsNotNull.png)
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/20_Utilizando_IN.png">
+---
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/21_Utilizando_Not_IN.png">
+## Principais aprendizados
 
-- Is Null - Is Not NULL
+- Criação e configuração de um projeto no Google Cloud / BigQuery
+- Estruturação de datasets e tabelas, incluindo upload de arquivos
+- Consultas SQL básicas (`SELECT`, `SELECT DISTINCT`) e de restrição (`WHERE`, `IN`, `NOT IN`, `IS NULL`)
+- Organização e reutilização de consultas salvas
 
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/22_Email_IsNull.png">
-
-<img src="https://github.com/JosiTubaroski/GoogleCloud_BigQuer/blob/main/img/23_Email_IsNotNull.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Próximos passos:** funções de agregação (`GROUP BY`, `COUNT`, `SUM`), JOINs entre tabelas, particionamento e clustering de tabelas para otimização de custo/performance.
