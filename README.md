@@ -1,6 +1,7 @@
-[← Voltar ao Portfólio de Engenharia de Dados](https://github.com/joycequoos/Data_Enginer/blob/main/README.md)
 
 # Google Cloud BigQuery
+
+[← Voltar ao Portfólio de Engenharia de Dados](https://github.com/joycequoos/Data_Enginer/blob/main/README.md)
 
 Estudo prático sobre o BigQuery, data warehouse gerenciado da Google Cloud — desde a criação da conta até consultas SQL básicas e intermediárias.
 
